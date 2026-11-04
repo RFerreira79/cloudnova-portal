@@ -177,10 +177,10 @@ def testar_url(url):
 @login_required
 def egress_test():
            destinos = [
-           "https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration",
-           "http://www.google.com",
-           "https://www.google.com",
-       ]
+               "https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration",
+               "http://www.google.com",
+               "https://www.google.com",
+           ]
     linhas = [(d, *testar_url(d)) for d in destinos]
     return render(titulo="Teste de saida (egress) atraves do Azure Firewall",
                   mensagem="Apenas os destinos autorizados nas regras do Firewall devem estar PERMITIDOS.",
